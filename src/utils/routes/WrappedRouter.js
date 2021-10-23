@@ -12,6 +12,10 @@ import SignUp from "../../containers/public/SignUp";
 import PrivateRouter from "./PrivateRouter";
 import PublicRouter from "./PublicRouter";
 
+/**
+ *  Index Router where links are switched.
+ *  @author Harrsh Patel <dev@harrsh.com>
+ */
 const WrappedRouter = () => {
     return (
         <Switch>

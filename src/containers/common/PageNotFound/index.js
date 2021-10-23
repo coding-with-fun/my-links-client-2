@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ *  404 Page.
+ *  @author Harrsh Patel <dev@harrsh.com>
+ */
 const PageNotFound = () => {
     return (
         <div>

@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ *  Screen to edit user links.
+ *  @access Only authenticated users
+ *  @author Harrsh Patel <dev@harrsh.com>
+ */
 const UserDataManagement = () => {
     return (
         <div>

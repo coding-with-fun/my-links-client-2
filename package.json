@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Client app for My Links project.",
     "repository": "https://github.com/harrsh2124/my-links-client",
-    "author": "Harrsh Patel <me.harrsh.patel@gmail.com>",
+    "author": "Harrsh Patel <dev@harrsh.com>",
     "license": "MIT",
     "private": false,
     "dependencies": {

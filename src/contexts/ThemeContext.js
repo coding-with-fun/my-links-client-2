@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 
 /**
- *  @author Harrsh Patel
  *  Context to handle theme
+ *  @author Harrsh Patel <dev@harrsh.com>
  */
 export const ThemeContext = createContext();
 
 /**
- *  @author Harrsh Patel
  *  Provider to handle theme
+ *  @author Harrsh Patel <dev@harrsh.com>
  */
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState("light");
