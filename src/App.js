@@ -1,13 +1,15 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import WrappedRouter from "./utils/routes/WrappedRouter";
 
 /**
  *  @author Harrsh Patel
  */
 const App = () => {
     return (
-        <div>
-            <h1 className="container-xl">Hello World!!</h1>
-        </div>
+        <Router>
+            <WrappedRouter />
+        </Router>
     );
 };
 
