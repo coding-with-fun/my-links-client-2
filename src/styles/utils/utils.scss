@@ -1,0 +1,32 @@
+@import "./button.scss";
+@import "./container.scss";
+@import "./flex.scss";
+@import "./margin.scss";
+@import "./padding.scss";
+@import "./text.scss";
+
+ul,
+li {
+    list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
