@@ -1,2 +1,3 @@
-# my-links-client
-Client app for My Links project
+# My links (Client)
+
+Client app for My Links project.
