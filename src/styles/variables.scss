@@ -52,10 +52,22 @@ body {
     --bg-color: #212529;
     --text-color: #f8f9fa;
     --border-color: #f8f9fa;
+    --box-shadow-color: rgb(0 0 0 / 20%) 0px 2px 4px -1px,
+        rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+    --sidebar-shadow-color: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+        0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    --navbar-link-gradient: #f8f9fa, #f8f9fa 20%, #f8f9fa 40%, #f8f9fa 60%,
+        #f8f9fa 80%, #f8f9fa;
 }
 
 .light {
     --bg-color: #f8f9fa;
     --text-color: #212529;
     --border-color: #212529;
+    --box-shadow-color: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+        0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    --sidebar-shadow-color: rgb(0 0 0 / 20%) 0px 2px 4px -1px,
+        rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+    --navbar-link-gradient: #212529, #212529 20%, #212529 40%, #212529 60%,
+        #212529 80%, #212529;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import WrappedRouter from "./utils/routes/WrappedRouter";
 
 /**
@@ -8,6 +9,8 @@ import WrappedRouter from "./utils/routes/WrappedRouter";
 const App = () => {
     return (
         <Router>
+            <Navbar />
+
             <WrappedRouter />
         </Router>
     );
