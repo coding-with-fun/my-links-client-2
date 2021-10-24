@@ -1,5 +1,11 @@
 .navbar__container {
     box-shadow: var(--box-shadow-color);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 
     .fas {
         font-size: 24px;

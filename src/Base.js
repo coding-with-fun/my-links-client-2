@@ -9,7 +9,7 @@ const Base = () => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`app__container ${theme}`}>
+        <div className={`base__container ${theme}`}>
             <App />
         </div>
     );

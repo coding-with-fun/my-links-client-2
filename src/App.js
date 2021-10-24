@@ -11,7 +11,9 @@ const App = () => {
         <Router>
             <Navbar />
 
-            <WrappedRouter />
+            <div className="app__container">
+                <WrappedRouter />
+            </div>
         </Router>
     );
 };

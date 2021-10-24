@@ -43,89 +43,91 @@ const Navbar = () => {
     };
 
     return (
-        <div>
-            <div className="navbar__container flex align-center py-3 px-4">
-                <div className="navbar__logo flex-1">
-                    <Link to="/">My Links</Link>
+        <div className="navbar__container flex align-center py-3 px-4">
+            <div className="navbar__logo flex-1">
+                <Link to="/">My Links</Link>
+            </div>
+
+            <span className="navbar__burger" onClick={toggleSidebar}>
+                <i className="fas fa-bars"></i>
+            </span>
+
+            <div
+                className={`${
+                    isSidebarOpen ? "sidebar_open" : "sidebar_close"
+                } navbar__links_container`}
+            >
+                <div className="navbar__header flex align-center">
+                    <div className="navbar__logo flex-1">
+                        <Link to="/" onClick={toggleSidebar}>
+                            My Links
+                        </Link>
+                    </div>
+
+                    <span onClick={toggleSidebar}>
+                        <i className="fas fa-times"></i>
+                    </span>
                 </div>
 
-                <span className="navbar__burger" onClick={toggleSidebar}>
-                    <i className="fas fa-bars"></i>
-                </span>
+                <div className="navbar__links">
+                    {commonLinks.map((link) => {
+                        return (
+                            <LinkContainer
+                                link={link}
+                                key={link._id}
+                                onClick={toggleSidebar}
+                            />
+                        );
+                    })}
 
-                <div
-                    className={`${
-                        isSidebarOpen ? "sidebar_open" : "sidebar_close"
-                    } navbar__links_container`}
-                >
-                    <div className="navbar__header flex align-center">
-                        <div className="navbar__logo flex-1">
-                            <Link to="/" onClick={toggleSidebar}>
-                                My Links
+                    {isUserAuthenticated ? (
+                        <Fragment>
+                            {privateLinks.map((link) => {
+                                return (
+                                    <LinkContainer
+                                        link={link}
+                                        key={link._id}
+                                        onClick={toggleSidebar}
+                                    />
+                                );
+                            })}
+
+                            <Link to="/">
+                                <Button
+                                    type="outlined"
+                                    className="navbar-btn"
+                                    onClick={toggleSidebar}
+                                >
+                                    Sign Out
+                                </Button>
                             </Link>
-                        </div>
-
-                        <span onClick={toggleSidebar}>
-                            <i className="fas fa-times"></i>
-                        </span>
-                    </div>
-
-                    <div className="navbar__links">
-                        {commonLinks.map((link) => {
-                            return (
-                                <LinkContainer
-                                    link={link}
-                                    key={link._id}
-                                    onClick={toggleSidebar}
-                                />
-                            );
-                        })}
-
-                        {isUserAuthenticated ? (
-                            <Fragment>
-                                {privateLinks.map((link) => {
-                                    return (
-                                        <LinkContainer
-                                            link={link}
-                                            key={link._id}
-                                            onClick={toggleSidebar}
-                                        />
-                                    );
-                                })}
-
-                                <Button
-                                    type="outlined"
-                                    className="navbar-btn"
-                                    onClick={toggleSidebar}
-                                >
-                                    <Link to="/">Sign Out</Link>
-                                </Button>
-                            </Fragment>
-                        ) : (
-                            <Fragment>
-                                <Button
-                                    type="outlined"
-                                    className="navbar-btn"
-                                    onClick={toggleSidebar}
-                                >
-                                    <Link to="/signin">Sign In</Link>
-                                </Button>
-                            </Fragment>
-                        )}
-                    </div>
-                </div>
-
-                <div onClick={toggleTheme} className="theme_toggler">
-                    {theme === "light" ? (
-                        <span>
-                            <i className="fas fa-moon"></i>
-                        </span>
+                        </Fragment>
                     ) : (
-                        <span>
-                            <i className="fas fa-sun"></i>
-                        </span>
+                        <Fragment>
+                            <Link to="/signin">
+                                <Button
+                                    type="outlined"
+                                    className="navbar-btn"
+                                    onClick={toggleSidebar}
+                                >
+                                    Sign In
+                                </Button>
+                            </Link>
+                        </Fragment>
                     )}
                 </div>
+            </div>
+
+            <div onClick={toggleTheme} className="theme_toggler">
+                {theme === "light" ? (
+                    <span>
+                        <i className="fas fa-moon"></i>
+                    </span>
+                ) : (
+                    <span>
+                        <i className="fas fa-sun"></i>
+                    </span>
+                )}
             </div>
         </div>
     );
