@@ -1,6 +1,6 @@
 .navbar__container {
     box-shadow: var(--box-shadow-color);
-    color: var(--text-color);
+    color: var(--dark-text-color);
     background-color: var(--bg-color);
     position: absolute;
     top: 0;
@@ -85,7 +85,7 @@
             transition: transform 500ms ease;
             transform: translate3d(100%, 0px, 0px);
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--dark-text-color);
 
             .navbar__header {
                 padding-bottom: 1rem;
@@ -104,8 +104,8 @@
                 .link__container {
                     margin: 1rem 0;
                     padding: 1rem;
-                    border: 1px solid var(--text-color);
-                    background-color: var(--text-color);
+                    border: 1px solid var(--border-color);
+                    background-color: var(--dark-text-color);
                     color: var(--bg-color);
                     min-width: 102px;
                     text-align: center;

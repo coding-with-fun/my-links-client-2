@@ -6,7 +6,7 @@ body {
 }
 
 .base__container {
-    color: var(--text-color);
+    color: var(--dark-text-color);
     background-color: var(--bg-color);
     height: 100vh;
     width: 100vw;
@@ -21,5 +21,5 @@ body {
 
 .app__container {
     margin-top: 4.4rem;
-    height: 100%;
+    height: calc(100% - 4.4rem);
 }

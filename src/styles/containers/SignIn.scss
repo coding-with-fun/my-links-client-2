@@ -1,3 +1,51 @@
 .signin_page__container {
-    height: 100%;
+    padding-top: 5rem;
+    max-width: 660px;
+    margin: auto;
+
+    .signin__container {
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 48px 80px;
+
+        .page_header {
+            font-size: 32px;
+            padding-bottom: 48px;
+        }
+
+        .signin_input__container {
+            width: 100%;
+
+            .username_input,
+            .password_input {
+                background-color: var(--dark-bg-color);
+                color: var(--dark-text-color);
+                font-size: 14px;
+                padding-left: 12px;
+                border-radius: 8px;
+                margin-bottom: 24px;
+                border: 2px solid transparent;
+
+                label {
+                    color: var(--light-text-color);
+                }
+            }
+
+            .signin_button__container {
+                margin-bottom: 24px;
+            }
+
+            .forgot_password {
+                text-align: center;
+                margin-bottom: 48px;
+            }
+        }
+
+        .signup__container {
+            a {
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
 }

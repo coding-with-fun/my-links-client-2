@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../../components/Button";
 
 /**
  *  Sign In screen.
@@ -8,30 +9,36 @@ import { Link } from "react-router-dom";
  */
 const SignIn = () => {
     return (
-        <div className="signin_page__container container">
-            <div className="signin__container">
+        <div className="signin_page__container">
+            <div className="signin__container flex align-center justify-center flex-col">
                 <div className="page_header">
                     Sign in to your MyLinks account
                 </div>
 
                 <div className="signin_input__container">
                     <form action="">
-                        <div className="username_input">
+                        <div className="username_input flex flex-col">
                             <label htmlFor="username">Username/Email</label>
-                            <input type="text" name="username" id="username" />
+                            <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                autoComplete="off"
+                            />
                         </div>
 
-                        <div className="password_input">
+                        <div className="password_input flex flex-col">
                             <label htmlFor="password">Password</label>
                             <input
                                 type="password"
                                 name="password"
                                 id="password"
+                                autoComplete="off"
                             />
                         </div>
 
-                        <div className="signin_button__container">
-                            <div className="signin_button">Sign In</div>
+                        <div className="signin_button__container flex justify-center">
+                            <Button type="contained">Sign In</Button>
                         </div>
 
                         <div className="forgot_password">Forgot password?</div>

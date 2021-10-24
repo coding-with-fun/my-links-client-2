@@ -42,3 +42,34 @@ img {
 .w-100 {
     width: 100vw;
 }
+
+input,
+input:-internal-autofill-selected {
+    border: none;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: var(--dark-bg-color) !important;
+    color: var(--dark-text-color) !important;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-clip: text;
+    background-color: var(--dark-bg-color) !important;
+    color: var(--dark-text-color) !important;
+}
