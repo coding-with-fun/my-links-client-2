@@ -45,7 +45,9 @@ img {
 
 input,
 input:-internal-autofill-selected,
-input:-webkit-autofill {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
     border: none;
     padding: 0;
     outline: none;
@@ -58,6 +60,7 @@ input:-webkit-autofill {
     -webkit-tap-highlight-color: transparent;
     background-color: var(--dark-bg-color) !important;
     color: var(--dark-text-color) !important;
+    -webkit-text-fill-color: var(--dark-text-color);
 }
 
 input:focus-visible {

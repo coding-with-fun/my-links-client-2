@@ -11,7 +11,7 @@ export const ThemeContext = createContext();
  *  @author Harrsh Patel <dev@harrsh.com>
  */
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     const toggleTheme = () => {
         const themeToSet = theme === "light" ? "dark" : "light";
