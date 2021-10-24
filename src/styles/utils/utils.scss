@@ -17,6 +17,14 @@ a:hover {
     color: inherit;
 }
 
+a:-webkit-any-link:focus-visible {
+    outline-offset: unset;
+}
+
+a:focus-visible {
+    outline: none;
+}
+
 p,
 h1,
 h2,

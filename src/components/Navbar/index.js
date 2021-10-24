@@ -25,9 +25,9 @@ const privateLinks = [
     },
 ];
 
-const LinkContainer = ({ link }) => {
+const LinkContainer = ({ link, ...rest }) => {
     return (
-        <div className="link__container">
+        <div className="link__container" {...rest}>
             <Link to={link.path}>{link.title}</Link>
         </div>
     );
@@ -45,7 +45,9 @@ const Navbar = () => {
     return (
         <div>
             <div className="navbar__container flex align-center py-3 px-4">
-                <div className="navbar__logo flex-1">My Links</div>
+                <div className="navbar__logo flex-1">
+                    <Link to="/">My Links</Link>
+                </div>
 
                 <span className="navbar__burger" onClick={toggleSidebar}>
                     <i className="fas fa-bars"></i>
@@ -57,16 +59,26 @@ const Navbar = () => {
                     } navbar__links_container`}
                 >
                     <div className="navbar__header flex align-center">
-                        <div className="navbar__logo flex-1">My Links</div>
+                        <div className="navbar__logo flex-1">
+                            <Link to="/" onClick={toggleSidebar}>
+                                My Links
+                            </Link>
+                        </div>
 
                         <span onClick={toggleSidebar}>
-                            <i class="fas fa-times"></i>
+                            <i className="fas fa-times"></i>
                         </span>
                     </div>
 
                     <div className="navbar__links">
                         {commonLinks.map((link) => {
-                            return <LinkContainer link={link} key={link._id} />;
+                            return (
+                                <LinkContainer
+                                    link={link}
+                                    key={link._id}
+                                    onClick={toggleSidebar}
+                                />
+                            );
                         })}
 
                         {isUserAuthenticated ? (
@@ -76,17 +88,26 @@ const Navbar = () => {
                                         <LinkContainer
                                             link={link}
                                             key={link._id}
+                                            onClick={toggleSidebar}
                                         />
                                     );
                                 })}
 
-                                <Button type="outlined" className="navbar-btn">
+                                <Button
+                                    type="outlined"
+                                    className="navbar-btn"
+                                    onClick={toggleSidebar}
+                                >
                                     <Link to="/">Sign Out</Link>
                                 </Button>
                             </Fragment>
                         ) : (
                             <Fragment>
-                                <Button type="outlined" className="navbar-btn">
+                                <Button
+                                    type="outlined"
+                                    className="navbar-btn"
+                                    onClick={toggleSidebar}
+                                >
                                     <Link to="/signin">Sign In</Link>
                                 </Button>
                             </Fragment>
@@ -97,11 +118,11 @@ const Navbar = () => {
                 <div onClick={toggleTheme} className="theme_toggler">
                     {theme === "light" ? (
                         <span>
-                            <i class="fas fa-moon"></i>
+                            <i className="fas fa-moon"></i>
                         </span>
                     ) : (
                         <span>
-                            <i class="fas fa-sun"></i>
+                            <i className="fas fa-sun"></i>
                         </span>
                     )}
                 </div>
