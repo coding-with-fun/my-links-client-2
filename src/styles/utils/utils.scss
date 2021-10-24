@@ -44,7 +44,8 @@ img {
 }
 
 input,
-input:-internal-autofill-selected {
+input:-internal-autofill-selected,
+input:-webkit-autofill {
     border: none;
     padding: 0;
     outline: none;
@@ -53,6 +54,7 @@ input:-internal-autofill-selected {
     line-height: 1.5;
     resize: vertical;
     appearance: none;
+    background-clip: text;
     -webkit-tap-highlight-color: transparent;
     background-color: var(--dark-bg-color) !important;
     color: var(--dark-text-color) !important;
@@ -60,16 +62,4 @@ input:-internal-autofill-selected {
 
 input:focus-visible {
     outline: none;
-}
-
-input:-webkit-autofill {
-    font: inherit;
-    font-size: 14px;
-    line-height: 1.5;
-    resize: vertical;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    background-clip: text;
-    background-color: var(--dark-bg-color) !important;
-    color: var(--dark-text-color) !important;
 }

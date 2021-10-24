@@ -5,6 +5,7 @@ button,
     display: flex;
     justify-content: center;
     align-items: center;
+    font: inherit;
 }
 
 button:focus-visible,
@@ -26,6 +27,7 @@ button:focus-visible,
     color: var(--bg-color);
 }
 
+button,
 .button-contained {
     background-color: var(--dark-text-color);
     color: var(--bg-color);
@@ -35,6 +37,7 @@ button:focus-visible,
     transition: all 100ms ease-in;
 }
 
+button,
 .button-contained:hover {
     background-color: var(--bg-color);
     color: var(--dark-text-color);
