@@ -39,13 +39,13 @@ const WrappedRouter = () => {
                 <SignUp />
             </PublicRouter>
 
-            <Route exact path="/:username">
-                <UserDetails />
-            </Route>
-
             <PrivateRouter exact path="/settings">
                 <AccountSettings />
             </PrivateRouter>
+
+            <Route exact path="/:username">
+                <UserDetails />
+            </Route>
 
             <PrivateRouter exact path="/:username/edit">
                 <UserDataManagement />

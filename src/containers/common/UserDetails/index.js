@@ -1,4 +1,5 @@
 import React from "react";
+import UserLinks from "./UserLinks";
 
 /**
  *  Screen to display user details to the web.
@@ -6,8 +7,10 @@ import React from "react";
  */
 const UserDetails = () => {
     return (
-        <div>
+        <div className="container">
             <h1>User Details</h1>
+
+            <UserLinks />
         </div>
     );
 };
