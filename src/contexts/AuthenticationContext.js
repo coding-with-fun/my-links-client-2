@@ -13,7 +13,7 @@ export const AuthenticationContext = createContext();
 export const AuthenticationProvider = ({ children }) => {
     const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
-    const handleSignIn = (cb) => {
+    const authenticateUser = (cb) => {
         setIsUserAuthenticated(true);
         if (cb) cb();
     };
@@ -28,7 +28,7 @@ export const AuthenticationProvider = ({ children }) => {
             value={{
                 isUserAuthenticated,
 
-                handleSignIn,
+                authenticateUser,
                 handleSignOut,
             }}
         >

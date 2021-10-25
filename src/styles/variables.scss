@@ -49,13 +49,13 @@ body {
 }
 
 .dark {
-    --light-bg-color: #495057;
-    --bg-color: #343a40;
+    --light-bg-color: #212529;
+    --bg-color: #212529;
     --dark-bg-color: #212529;
 
     --light-text-color: #f8f9fa;
-    --text-color: #e9ecef;
-    --dark-text-color: #dee2e6;
+    --text-color: #f8f9fa;
+    --dark-text-color: #f8f9fa;
 
     --border-color: var(--dark-text-color);
     --box-shadow-color: rgb(0 0 0 / 20%) 0px 2px 4px -1px,
@@ -67,11 +67,11 @@ body {
 
 .light {
     --light-bg-color: #f8f9fa;
-    --bg-color: #e9ecef;
-    --dark-bg-color: #dee2e6;
+    --bg-color: #f8f9fa;
+    --dark-bg-color: #f8f9fa;
 
-    --light-text-color: #495057;
-    --text-color: #343a40;
+    --light-text-color: #212529;
+    --text-color: #212529;
     --dark-text-color: #212529;
 
     --border-color: var(--dark-text-color);

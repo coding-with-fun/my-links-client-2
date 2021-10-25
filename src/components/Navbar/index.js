@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AuthenticationContext } from "../../contexts/AuthenticationContext";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import Button from "../Button";
@@ -20,8 +20,8 @@ const commonLinks = [
 const privateLinks = [
     {
         _id: 0,
-        title: "Profile",
-        path: "/:username/settings",
+        title: "Account",
+        path: "/harrsh/settings",
     },
 ];
 
@@ -34,12 +34,23 @@ const LinkContainer = ({ link, ...rest }) => {
 };
 
 const Navbar = () => {
+    const history = useHistory();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const { isUserAuthenticated } = useContext(AuthenticationContext);
+    const { isUserAuthenticated, handleSignOut } = useContext(
+        AuthenticationContext
+    );
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
+    };
+
+    const handleSignOutUser = () => {
+        handleSignOut(() => {
+            history.push("/");
+        });
+
+        toggleSidebar();
     };
 
     return (
@@ -96,7 +107,7 @@ const Navbar = () => {
                                 <Button
                                     type="outlined"
                                     className="navbar-btn"
-                                    onClick={toggleSidebar}
+                                    onClick={handleSignOutUser}
                                 >
                                     Sign Out
                                 </Button>
