@@ -15,7 +15,7 @@ const SignUp = () => {
     const location = useLocation();
 
     const pathName = get(location, "state.from", {
-        pathname: "/",
+        pathname: "/settings",
     });
 
     const {

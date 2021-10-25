@@ -21,15 +21,17 @@ const privateLinks = [
     {
         _id: 0,
         title: "Account",
-        path: "/harrsh/settings",
+        path: "/settings",
     },
 ];
 
 const LinkContainer = ({ link, ...rest }) => {
     return (
-        <div className="link__container" {...rest}>
-            <Link to={link.path}>{link.title}</Link>
-        </div>
+        <Link to={link.path}>
+            <div className="link__container" {...rest}>
+                {link.title}
+            </div>
+        </Link>
     );
 };
 

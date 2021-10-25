@@ -43,7 +43,7 @@ const WrappedRouter = () => {
                 <UserDetails />
             </Route>
 
-            <PrivateRouter exact path="/:username/settings">
+            <PrivateRouter exact path="/settings">
                 <AccountSettings />
             </PrivateRouter>
 
