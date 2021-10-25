@@ -1,0 +1,17 @@
+.user_details__container {
+    padding: 3rem 0;
+
+    .user_photo__container {
+        margin-bottom: 1.5rem;
+
+        img {
+            border-radius: 50%;
+            width: 96px;
+            height: 96px;
+            display: block;
+            object-fit: contain;
+            object-position: initial;
+            filter: none;
+        }
+    }
+}
